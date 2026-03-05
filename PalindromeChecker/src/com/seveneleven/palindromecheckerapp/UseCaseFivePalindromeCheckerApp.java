@@ -11,10 +11,13 @@ public class UseCaseFivePalindromeCheckerApp {
 		System.out.print("Enter a string:");
 		String input=sc.next();
 		Stack<Character> stack=new Stack<>();
+		//Adding each character to the stack
 		for(char c:input.toCharArray()) {
 			stack.add(c);
 		}
+		// Flag to track if it's a palindrome or not
 		boolean isPalindrome=true;
+		// Compare original sequence with the pop order
 		for(char c:input.toCharArray()) {
 			if(c!=stack.pop()) {
 				isPalindrome=false;
