@@ -15,11 +15,14 @@ public class UseCaseSixPalindromeCheckerApp {
 		String input=sc.next();
 		Queue<Character> queue=new LinkedList<>();
 		Stack<Character> stack=new Stack<>();
+		//Adding each character to the queue and stack
 		for(char c:input.toCharArray()) {
 			queue.add(c);
 			stack.add(c);
 		}
+		//Flag to track the palindrome
 		boolean isPalindrome=true;
+		// Characters are compared by removing from front of queue and top of stack
 		while(!queue.isEmpty()) {
 			if(queue.poll()!=stack.pop()) {
 				isPalindrome=false;
