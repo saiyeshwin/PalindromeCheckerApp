@@ -10,10 +10,14 @@ public class UseCaseFourPalindromeCheckerApp {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter a string:");
 		String input=sc.next();
+		// Convert string to it's character array
 		char[] charArray=input.toCharArray();
+		//Initialize pointers start and end
 		int start=0;
 		int end=charArray.length-1;
+		// Flag which assumes the string is palindrome initially
 		boolean isPalindrome=true;
+		// Continue comparison until pointers cross eachother
 		while(start<end) {
 			if(charArray[start]!=charArray[end]) {
 				isPalindrome=false;
@@ -22,6 +26,7 @@ public class UseCaseFourPalindromeCheckerApp {
 			start++;
 			end--;
 		}
+		// Display result accordingly
 		if(isPalindrome) 
 			System.out.println("Is it a palindrome? True");
 		else 
