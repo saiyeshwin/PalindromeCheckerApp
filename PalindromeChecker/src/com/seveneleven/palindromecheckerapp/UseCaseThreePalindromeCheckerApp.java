@@ -11,9 +11,11 @@ public class UseCaseThreePalindromeCheckerApp {
 		String input=sc.next();
 		System.out.println("Input text:"+input);
 		String reverse="";
+		// Iterate from last character to first
 		for(int i=input.length()-1;i>=0;i--) {
 			reverse+=input.charAt(i);
 		}
+		// Comapres the original string with the reversed string 
 		if(input.equals(reverse)) 
 			System.out.println("Is it a palindrome? True");
 		else 
